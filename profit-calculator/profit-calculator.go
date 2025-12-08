@@ -8,23 +8,20 @@ func main() {
 
 	fmt.Print("What are the company revenues? ")
 	fmt.Scan(&revenues)
+
 	fmt.Print("What are the total expenses? ")
 	fmt.Scan(&expenses)
+
 	fmt.Print("What is the tax rate? ")
 	fmt.Scan(&taxRate)
 
-	taxRate = (taxRate / 100)
-
 	EBT := revenues - expenses
-	profit := EBT - (EBT * taxRate)
+	profit := EBT - (EBT * (taxRate / 100))
 	ratio := EBT / profit
 
-	fmt.Print("Your revenues before taxes are: ")
-	fmt.Println(EBT)
+	fmt.Println("Your revenues before taxes are: ", EBT)
 
-	fmt.Print("Earning after tax: ")
-	fmt.Println(profit)
+	fmt.Println("Earning after tax: ", profit)
 
-	fmt.Print("Ratio: ")
-	fmt.Println(ratio)
+	fmt.Println("Ratio: ", ratio)
 }
