@@ -27,4 +27,10 @@ func main() {
 	fmt.Println(math.Round(futureValue))
 	fmt.Print("Future Real Value: ")
 	fmt.Println(math.Round(futureRealValue))
+	result := sum(1, 1)
+	fmt.Println(result)
+}
+
+func sum(a int, b int) int {
+	return a + b
 }
