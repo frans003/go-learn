@@ -4,10 +4,11 @@ import "fmt"
 
 func main() {
 
-	var revenues, expenses, taxRate float64
-	revenues = getUserInput("What are the company revenues? ")
-	expenses = getUserInput("What are the total expenses? ")
-	taxRate = getUserInput("What is the tax rate? ")
+	// var revenues, expenses, taxRate float64
+
+	revenues := getUserInput("What are the company revenues? ")
+	expenses := getUserInput("What are the total expenses? ")
+	taxRate := getUserInput("What is the tax rate? ")
 
 	EBT := calcEarningsBeforeTaxes(revenues, expenses)
 	profits, taxes := calcProfits(EBT, taxRate)
